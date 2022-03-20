@@ -218,7 +218,7 @@ hr{
 }
 .staff_member{
     background-color: #ffffff;
-    height: 170px;
+    height: 230px;
     width: 150px;
     border-radius: 30px;
     margin-bottom: 60px;
@@ -245,6 +245,12 @@ hr{
     font-family: 'Montserrat-Light';
     text-align: center;
 }
+.staff_member_name{
+    font-size: 22px;
+    font-family: 'Montserrat-Light';
+    text-align: center;
+}
+
 
 /*faq*/
 
@@ -394,7 +400,8 @@ hr{
     height: 40px;
     font-size: 18px;
     padding-bottom: 5px;
-}.imgggschedule{
+}
+.imgggschedule{
     display:block;
     margin-left: auto;
     margin-right: auto;
