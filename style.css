@@ -405,7 +405,7 @@ hr{
     display:block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 380px;
+    max-width: 330px;
     margin-top: 50px;
     margin-bottom: 25px;
     box-shadow: 0px 9px 4px -6px rgba(0,0,0,0.75);
@@ -415,7 +415,7 @@ hr{
     display:block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 380px;
+    max-width: 330px;
     margin-top: 50px;
     margin-bottom: 25px;
     z-index: 10;
@@ -433,8 +433,78 @@ hr{
 .maintitle{
     color: #000000;
     text-align: center;
-    font-size: 100px;
+    font-size: 60px;
     margin-top: 90px;
     margin-bottom: 0%;
     font-family: 'Montserrat-Medium';
+}
+.paragrafo{
+    max-width: 80%;
+    margin: auto;
+    text-align: justify;
+    font-family: 'Montserrat-Light';
+    color: #575d69;
+    font-size: 18px;
+    line-height: 1.4em;
+    padding:30px 0;
+}
+.paragrafocentro{
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Montserrat-Light';
+    color: #575d69;
+    font-size: 18px;
+    line-height: 1.4em;
+}
+.titleschedule{
+    text-align: left;
+    font-family: 'Montserrat-Medium';
+    max-width: 80%;
+    margin: auto;
+}
+.certificazioni{
+    margin-left:10px;
+    margin-top:6px;
+    width: 40px;
+}
+.rapidinfo{
+    border: solid 2px rgb(96, 165, 230);
+    border-radius: 20px;
+    background-color:#dcf2ff;
+    padding: 10px;
+    max-width: 80%;
+    margin: auto;
+    font-size: 18px;
+}
+.flexitemdetails{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+}
+.itemdetails{
+    font-family: 'Montserrat-Medium';
+    color: #575d69;
+    margin:10px;
+    font-size: 14px;
+    text-align: left;
+}
+.scopri{
+    border: none;
+    border-radius: 50px;
+    outline: 0;
+    margin-top: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: white;
+    background-color: #42aaf5;
+    text-align: center;
+    cursor: url('images/customcursor.cur'), auto;	
+    width: 100%;
+    font-size: 18px;
+}
+.difficolta{
+    position: absolute;
+    height: 22px;
+    margin: 3.5px 0px 3.5px 8px;
 }

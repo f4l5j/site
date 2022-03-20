@@ -17,17 +17,5 @@
   "description": "Orgoglio Bresciano description",
   "background_color": "#000000",
   "display": "standalone",
-  "theme_color": "#ff0000",
-  "screenshots": [
-    {
-      "src": "images/screenshot1.png",
-      "type": "image/png",
-      "sizes": "540x720"
-    },
-    {
-      "src": "images/screenshot2.jpg",
-      "type": "image/jpg",
-      "sizes": "540x720"
-    }
-  ]
+  "theme_color": "#ff0000"
 }
