@@ -14,6 +14,7 @@ body{
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
     background: rgb(232,231,255);
+    overflow-x: hidden;
     background: radial-gradient(circle, rgba(232,231,255,1) 0%, rgba(220,249,255,1) 100%);
 }
 a {
@@ -530,4 +531,30 @@ hr{
 #bottone {
     text-decoration: none;
 }
-  
+
+/*tabela vermut*/
+/*tabella vermut*/
+table{
+    display:flex;
+    justify-content: center;
+    border-collapse: collapse;
+}
+td{
+    border: solid 2px;
+    border-color: rgb(250, 235, 22);
+    text-align: center;
+    padding: 5px;
+}
+#tdfirst{
+    border: none;
+}
+#bianco{
+    background-color: rgb(251, 251, 251);
+}
+#rosso{
+    background-color: rgb(228, 78, 78);
+}
+#secco{
+    background-color: #eee8b5;
+}
+
