@@ -1,71 +1,37 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang=en-US>
 <head>
-    <title>OBSpace</title>
-    <link rel="shortcut icon" href="icons/icon.ico"/>
-    <link rel="stylesheet" href="privacypolicy_style.css">
-    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#4287f5"/>
-    <link rel="manifest" href="manifest.json">
-    <script>
-        navigator.serviceWorker.getRegistration()
-.then(function(registration) {
-    if(registration){
-        registration.unregister()
-        .then(
-            function(success) {
-                // if success = true, unregister was successful
-                });
-        }
-    });
-</script>
-<script>
-    if ('caches' in window) {
-caches.keys()
-  .then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-          return caches.delete(key);
-      }));
-  })
-}
-</script>
-<script>
-    //if browser support service worker
-    if('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js');
-    };
-</script>
+<title>OBSpace</title>
+<link rel="shortcut icon" href="icons/icon.ico"/>
+<link rel=stylesheet href=privacypolicy_style.css>
+<meta name=viewport content="width=device-width, user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv=X-UA-Compatible content="ie=edge">
+<meta name=theme-color content="#4287f5"/>
+<link rel=manifest href=manifest.json>
+<script>navigator.serviceWorker.getRegistration().then(function(registration){if(registration){registration.unregister().then(function(success){});}});</script>
+<script>if('caches'in window){caches.keys().then(function(keyList){return Promise.all(keyList.map(function(key){return caches.delete(key);}));})}</script>
+<script>if('serviceWorker'in navigator){navigator.serviceWorker.register('sw.js');};</script>
 </head>
 <body>
-    
-    <!--menu contestuale-->
-    <div class="menu">
-        <ul class="listmenu">
-          <li class="menuoptionfirst" onclick="goBack()">Indietro</li>
-          <li class="menuoption" onclick="goForward()">Avanti</li>
-          <li class="menuoption" onclick="reload()">Ricarica</li>
-          <li class="menuoption" onclick="deleteItems()">Cancella cookie</li>
-          <li class="menuoptionlast" onclick="toggleFullScreen()">Fullscreen</li>
-        </ul>
-    </div>
-
-    <!--inizio interfaccia-->
-
-    <!--inizio navmenu-->
-
-    <div id="navmenu">
-        <a href="index.html"><img class="elemento_navmenu" src="icons/home.png"></a>
-        <a href="faq.html"><img class="elemento_navmenu" src="icons/faq.png"></a>
-        <a href="drinks.html"><img class="elemento_navmenu" src="icons/drinks.png"></a>
-        <a href="settings.html"><img class="elemento_navmenu" src="icons/settings.png"></a>
-    </div>
-    
-    <!--fine navmenu-->
-<div id="cookies_description">
-    <h1>Cookies Policy</h1>
+<div class=menu>
+<ul class=listmenu>
+<li class=menuoptionfirst onclick=goBack()>Indietro</li>
+<li class=menuoption onclick=goForward()>Avanti</li>
+<li class=menuoption onclick=reload()>Ricarica</li>
+<li class=menuoption onclick=deleteItems()>Cancella cookie</li>
+<li class=menuoptionlast onclick=toggleFullScreen()>Fullscreen</li>
+</ul>
+</div>
+<div id=navmenu>
+<a href=index.html><img class=elemento_navmenu src=icons/home.png></a>
+<a href=faq.html><img class=elemento_navmenu src=icons/faq.png></a>
+<a href=drinks.html><img class=elemento_navmenu src=icons/drinks.png></a>
+<a href=settings.html><img class=elemento_navmenu src=icons/settings.png></a>
+</div>
+<div id=cookies_description>
+<h1>Cookies Policy</h1>
 <p>Last updated: March 23, 2022</p>
-<p>This Cookies Policy explains what Cookies are and how We use them. You should read this policy so You can understand what type of cookies We use, or the information We collect using Cookies and how that information is used. This Cookies Policy has been created with the help of the <a href="https://www.freeprivacypolicy.com/free-cookies-policy-generator/" target="_blank">Cookies Policy Generator</a>.</p>
+<p>This Cookies Policy explains what Cookies are and how We use them. You should read this policy so You can understand what type of cookies We use, or the information We collect using Cookies and how that information is used. This Cookies Policy has been created with the help of the <a href=https://www.freeprivacypolicy.com/free-cookies-policy-generator/ target=_blank>Cookies Policy Generator</a>.</p>
 <p>Cookies do not typically contain any information that personally identifies a user, but personal information that we store about You may be linked to the information stored in and obtained from Cookies. For further information on how We use, store and keep your personal data secure, see our Privacy Policy.</p>
 <p>We do not store sensitive personal information, such as mailing addresses, account passwords, etc. in the Cookies We use.</p>
 <h1>Interpretation and Definitions</h1>
@@ -76,7 +42,7 @@ caches.keys()
 <ul>
 <li><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Cookies Policy) refers to OBSpace.</li>
 <li><strong>Cookies</strong> means small files that are placed on Your computer, mobile device or any other device by a website, containing details of your browsing history on that website among its many uses.</li>
-<li><strong>Website</strong> refers to OBSpace, accessible from <a href="https://obspace.onrender.com" rel="external nofollow noopener" target="_blank">https://obspace.onrender.com</a></li>
+<li><strong>Website</strong> refers to OBSpace, accessible from <a href=https://obspace.onrender.com rel="external nofollow noopener" target=_blank>https://obspace.onrender.com</a></li>
 <li><strong>You</strong> means the individual accessing or using the Website, or a company, or any legal entity on behalf of which such individual is accessing or using the Website, as applicable.</li>
 </ul>
 <h1>The use of the Cookies</h1>
@@ -103,33 +69,28 @@ caches.keys()
 <p>If You'd like to delete Cookies or instruct your web browser to delete or refuse Cookies, please visit the help pages of your web browser.</p>
 <ul>
 <li>
-<p>For the Chrome web browser, please visit this page from Google: <a href="https://support.google.com/accounts/answer/32050" rel="external nofollow noopener" target="_blank">https://support.google.com/accounts/<br>answer/32050</a></p>
+<p>For the Chrome web browser, please visit this page from Google: <a href=https://support.google.com/accounts/answer/32050 rel="external nofollow noopener" target=_blank>https://support.google.com/accounts/<br>answer/32050</a></p>
 </li>
 <li>
-<p>For the Internet Explorer web browser, please visit this page from Microsoft: <a href="http://support.microsoft.com/kb/278835" rel="external nofollow noopener" target="_blank">http://support.microsoft.com/<br>kb/278835</a></p>
+<p>For the Internet Explorer web browser, please visit this page from Microsoft: <a href=http://support.microsoft.com/kb/278835 rel="external nofollow noopener" target=_blank>http://support.microsoft.com/<br>kb/278835</a></p>
 </li>
 <li>
-<p>For the Firefox web browser, please visit this page from Mozilla: <a href="https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored" rel="external nofollow noopener" target="_blank">https://support.mozilla.org/en-US/<br>kb/delete-cookies-remove-info<br>-websites-stored</a></p>
+<p>For the Firefox web browser, please visit this page from Mozilla: <a href=https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored rel="external nofollow noopener" target=_blank>https://support.mozilla.org/en-US/<br>kb/delete-cookies-remove-info<br>-websites-stored</a></p>
 </li>
 <li>
-<p>For the Safari web browser, please visit this page from Apple: <a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" rel="external nofollow noopener" target="_blank">https://support.apple.com/<br>guide/safari/<br>manage-cookies-and-website-data<br>-sfri11471/mac</a></p>
+<p>For the Safari web browser, please visit this page from Apple: <a href=https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac rel="external nofollow noopener" target=_blank>https://support.apple.com/<br>guide/safari/<br>manage-cookies-and-website-data<br>-sfri11471/mac</a></p>
 </li>
 </ul>
 <p>For any other web browser, please visit your web browser's official web pages.</p>
 <h2>More Information about Cookies</h2>
-<p>You can learn more about cookies: <a href="https://www.freeprivacypolicy.com/blog/cookies/" target="_blank">Cookies: What Do They Do?</a>.</p>
+<p>You can learn more about cookies: <a href=https://www.freeprivacypolicy.com/blog/cookies/ target=_blank>Cookies: What Do They Do?</a>.</p>
 <h2>Contact Us</h2>
 <p>If you have any questions about this Cookies Policy, You can contact us:</p>
 <ul>
 <li>By email: orgogliobrescianobs@gmail.com</li>
 </ul>
 </div>
-
-    <br>
-
-    <!--fine interfaccia-->
-
-    <!--script-->
-    <script src="cookie.js"></script>
-    <script src="contextmenu.js"></script>
+<br>
+<script src=cookie.js></script>
+<script src=contextmenu.js></script>
 </body>
