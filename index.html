@@ -1,78 +1,122 @@
 <!DOCTYPE html>
-<html lang=it>
+<html lang="it">
 <head>
-<link rel="shortcut icon" href="icons/icon.ico"/>
-<link rel=stylesheet href=style.css>
-<meta name=viewport content="width=device-width, user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-<meta http-equiv=X-UA-Compatible content="ie=edge">
-<title>OBSpace</title>
-<meta name=theme-color content="#4287f5"/>
-<link rel=manifest href=manifest.json>
-<script>navigator.serviceWorker.getRegistration().then(function(registration){if(registration){registration.unregister().then(function(success){});}});</script>
-<script>if('caches'in window){caches.keys().then(function(keyList){return Promise.all(keyList.map(function(key){return caches.delete(key);}));})}</script>
-<script>if('serviceWorker'in navigator){navigator.serviceWorker.register('sw.js');};</script>
+    <link rel="shortcut icon" href="icons/icon.ico"/>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OBSpace</title>
+    <meta name="theme-color" content="#4287f5"/>
+    <link rel="manifest" href="manifest.json">
+    <script>
+            navigator.serviceWorker.getRegistration()
+    .then(function(registration) {
+        if(registration){
+            registration.unregister()
+            .then(
+                function(success) {
+                    // if success = true, unregister was successful
+                    });
+            }
+        });
+    </script>
+    <script>
+        if ('caches' in window) {
+    caches.keys()
+      .then(function(keyList) {
+          return Promise.all(keyList.map(function(key) {
+              return caches.delete(key);
+          }));
+      })
+}
+    </script>
+    <script>
+        //if browser support service worker
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('sw.js');
+        };
+    </script>
 </head>
 <body>
-<div class=menu>
-<ul class=listmenu>
-<li class=menuoptionfirst onclick=goBack()>Indietro</li>
-<li class=menuoption onclick=goForward()>Avanti</li>
-<li class=menuoption onclick=reload()>Ricarica</li>
-<li class=menuoption onclick=deleteItems()>Cancella cookie</li>
-<li class=menuoptionlast onclick=toggleFullScreen()>Fullscreen</li>
-</ul>
-</div>
-<div id=navmenu>
-<a href=index.html><img class=elemento_corrente_navmenu src=icons/home.png></a>
-<a href=faq.html><img class=elemento_navmenu src=icons/faq.png></a>
-<a href=drinks.html><img class=elemento_navmenu src=icons/drinks.png></a>
-<a href=settings.html><img class=elemento_navmenu src=icons/settings.png></a>
-</div>
-<img class=mainlogo1 src=images/logo_blu.png alt=logo>
-<img class=mainlogo2 src=images/scritta.png alt=logo>
-<div id=staff_container>
-<div class=staff_member>
-<img class=staff_image src=images/staff/nicholas.png>
-<h3 class=staff_member_name>Nicholas</h3>
-<p class=staff_member_decription>Founder della pagina e di tutti i progetti Orgoglio Bresciano</p>
-</div>
-<div class=staff_member>
-<img class=staff_image src=images/staff/greata.png>
-<h3 class=staff_member_name>Greta</h3>
-<p class=staff_member_decription>Vice admin della pagina e direttrice generale</p>
-</div>
-<div class=staff_member>
-<img class=staff_image src=images/staff/davide.png>
-<h3 class=staff_member_name>Davide</h3>
-<p class=staff_member_decription>Promoter e tiktoker della pagina</p>
-</div>
-<div class=staff_member>
-<img class=staff_image src=images/staff/matteo.png>
-<h3 class=staff_member_name>Matteo</h3>
-<p class=staff_member_decription>Designer grafico</p>
-</div>
-<div class=staff_member>
-<img class=staff_image src=images/staff/debora.png>
-<h3 class=staff_member_name>Debora</h3>
-<p class=staff_member_decription>Promoter e admin</p>
-</div>
-<div class=staff_member>
-<img class=staff_image src=images/staff/francesco.png>
-<h3 class=staff_member_name>Francesco</h3>
-<p class=staff_member_decription>Designer grafico</p>
-</div>
-</div>
-<div id=notizia>
-<a href=https://docs.google.com/document/d/e/2PACX-1vTXr4HURrOpbKM8b4sHsXiqowemIkTtN9RK76vMgmBXr7MQzdSqt1vO8rf-Q-aaFlVsB7iqILe9TTNM/pub><button id=bottone>Guarda l'ultimo numero del giornale</button></a>
-</div>
-<div class=flexcookies>
-<div class=cookie-container>
-<h4 id=cookiescritta>
-Questo sito usa <a id="linkcookies"href=privacypolicy.html>cookie</a> che servono a salvare la conferma della visione delle informative o di schede
-</h4>
-<button class=cookie-btn>ACCETTA</button>
-</div>
-</div>
-<script src=cookie.js></script>
-<script src=contextmenu.js></script>
+    
+    <!--menu contestuale-->
+    <div class="menu">
+        <ul class="listmenu">
+          <li class="menuoptionfirst" onclick="goBack()">Indietro</li>
+          <li class="menuoption" onclick="goForward()">Avanti</li>
+          <li class="menuoption" onclick="reload()">Ricarica</li>
+          <li class="menuoption" onclick="deleteItems()">Cancella cookie</li>
+          <li class="menuoptionlast" onclick="toggleFullScreen()">Fullscreen</li>
+        </ul>
+    </div>
+
+    <!--inizio interfaccia-->
+
+    <!--inizio navmenu-->
+
+    <div id="navmenu">
+        <a href="index.html"><img class="elemento_corrente_navmenu" src="icons/home.png"></a>
+        <a href="faq.html"><img class="elemento_navmenu" src="icons/faq.png"></a>
+        <a href="drinks.html"><img class="elemento_navmenu" src="icons/drinks.png"></a>
+        <a href="settings.html"><img class="elemento_navmenu" src="icons/settings.png"></a>
+    </div>
+    
+    <!--fine navmenu-->
+
+    <img class="mainlogo1" src="images/logo_blu.png" alt="logo">
+    <img class="mainlogo2" src="images/scritta.png" alt="logo">
+
+    <div id="staff_container">
+        <div class="staff_member">
+            <img class="staff_image" src="images/staff/nicholas.png">
+            <h3 class="staff_member_name">Nicholas</h3>
+            <p class="staff_member_decription">Founder della pagina e di tutti i progetti Orgoglio Bresciano</p>
+        </div>
+        <div class="staff_member">
+            <img class="staff_image" src="images/staff/greata.png">
+            <h3 class="staff_member_name">Greta</h3>
+            <p class="staff_member_decription">Vice admin della pagina e direttrice generale</p>
+        </div>
+        <div class="staff_member">
+            <img class="staff_image" src="images/staff/davide.png">
+            <h3 class="staff_member_name">Davide</h3>
+            <p class="staff_member_decription">Promoter e tiktoker della pagina</p>
+        </div>
+        <div class="staff_member">
+            <img class="staff_image" src="images/staff/matteo.png">
+            <h3 class="staff_member_name">Matteo</h3>
+            <p class="staff_member_decription">Designer grafico</p>
+        </div>
+        <div class="staff_member">
+            <img class="staff_image" src="images/staff/debora.png">
+            <h3 class="staff_member_name">Debora</h3>
+            <p class="staff_member_decription">Promoter e admin</p>
+        </div>
+        <div class="staff_member">
+            <img class="staff_image" src="images/staff/francesco.png">
+            <h3 class="staff_member_name">Francesco</h3>
+            <p class="staff_member_decription">Designer grafico</p>
+        </div>
+    </div>
+
+    <!--inizio iframe documento-->
+    <div id="notizia">
+        <a href="https://docs.google.com/document/d/e/2PACX-1vTXr4HURrOpbKM8b4sHsXiqowemIkTtN9RK76vMgmBXr7MQzdSqt1vO8rf-Q-aaFlVsB7iqILe9TTNM/pub"><button id="bottone">Guarda l'ultimo numero del giornale</button></a>
+    </div>
+
+    <!--fine interfaccia-->
+
+    <!--cookie alert-->
+    <div class="flexcookies">
+        <div class="cookie-container">
+            <h4 id="cookiescritta">
+                Questo sito usa <a id="linkcookies"href="privacypolicy.html">cookie</a> che servono a salvare la conferma della visione delle informative o di schede
+            </h4>
+            <button class="cookie-btn">ACCETTA</button>
+        </div>
+    </div>
+
+    <!--script-->
+    <script src="cookie.js"></script>
+    <script src="contextmenu.js"></script>
 </body>
