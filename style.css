@@ -519,20 +519,19 @@ hr{
     -moz-border-radius: 60;
     border-radius: 60px;
     color: #000000;
-    background: #ffffff;
+    background: #ffffff00;
     padding: 10px 20px 10px 20px;
-    border: dotted #b8b8b8 2px;
+    border: solid #ff9c1a 2px;
     text-decoration: none;
     display: block;
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   
 #bottone {
     text-decoration: none;
 }
 
-/*tabela vermut*/
 /*tabella vermut*/
 table{
     display:flex;
@@ -558,3 +557,10 @@ td{
     background-color: #eee8b5;
 }
 
+#meteo{
+    max-width: 80%;
+    margin-bottom: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
